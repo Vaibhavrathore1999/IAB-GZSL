@@ -1,0 +1,38 @@
+---
+Experiment:
+  resnet_path: ./pretrained_models/resnet101SUN.pth
+  latent_dim: 4096
+  cls_dim: 2048
+  feat_dim: 2048
+  att_size: 102
+  image_size: 448
+  seen_classes: 645
+  nclasses: 707
+  device: "cuda:0"
+  random_grouping: true
+  random_crop: true
+  train_id: 1
+  nepoch: 30
+  manualSeed: 2347
+  group_path: 'attri_groups_4.json'
+Model:
+  vars_test: true
+  batch_size: 16
+  pretrain_epoch: 5
+  unfix_low: false
+  unfix_high: true
+  unfix_vars: true
+Hyperparameters:
+  t: 7
+  gamma: 2
+  delta: 2.0
+  alpha1: 1.0
+  alpha2: 1.0
+  alpha3: 0.2
+  alpha4: 1.0
+  alpha5: 0.2
+  alpha6: 0.0
+  alpha7: 0.0
+  Lp1: 10
+  pretrain_lr: 0.001
+  classifier_lr: 0.000001

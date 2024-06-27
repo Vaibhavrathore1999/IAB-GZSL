@@ -1,0 +1,40 @@
+---
+Experiment:
+  resnet_path: ./pretrained_models/resnet101CUB.pth
+  latent_dim: 4096
+  cls_dim: 2048
+  feat_dim: 2048
+  att_size: 312
+  image_size: 448
+  seen_classes: 150
+  nclasses: 200
+  device: "cuda:1"
+  random_grouping: false
+  random_crop: true
+  train_id: 1
+  nepoch: 30
+  manualSeed: 3131
+  group_path: 'attri_groups_8.json'
+Model:
+  vars_test: true
+  NAA_test: true
+  batch_size: 32
+  pretrain_epoch: 1
+  unfix_low: true
+  unfix_high: true
+  unfix_vars: false
+  train_beta: false
+Hyperparameters:
+  t: 5
+  gamma: 1
+  delta: 0.6
+  alpha1: 1.0
+  alpha2: 0.1
+  alpha3: 0.2
+  alpha4: 1.0
+  alpha5: 0.2
+  alpha6: 0.0
+  alpha7: 0.0
+  Lp1: 30
+  pretrain_lr: 0.0001
+  classifier_lr: 0.000001
