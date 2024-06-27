@@ -14,7 +14,7 @@ Set the --root in opt.py as your code path.
 
 Please download CUB, AWA2, SUN, FLO datasets, and set the --image_root in opt.py to the datasets.
 
-Please download pretrained resnet [weights](https://drive.google.com/file/d/1c5scuU0kZS5a9Rz3kf5T0UweCvOpGsh2/view)[1] and place it in ./pretrained_models/
+Please download pretrained resnet [weights](https://drive.google.com/drive/folders/1zra6v53trkd0x8ZmtzBkWwyJdHbVvy2H)[1] and place it in ./pretrained_models/
 
 The final project folder should contain the following structure:
   ```html
@@ -47,6 +47,7 @@ We have provided the following configurations in the /configs directory, which c
 * pretrain_epoch        %the number of epochs for the warm-up phase
 * random_grouping  %specifies whether random divided groups are used
 * Lp1  %the number of groups when utilizing random groups
+* alphas %loss weights
   
 ## Acknowledgment
 
