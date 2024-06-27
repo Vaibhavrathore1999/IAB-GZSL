@@ -23,7 +23,7 @@ The final project folder should contain the following structure:
   ├── data/                 % dataset spilit for AWA2, CUB, FLO, SUN
   ├── logs/                 %  for saving the training logs
   ├── out/                 %  for saving weights during training
-  ├── other .py files        %  for saving weights during training
+...
   ```
 
 ## Test
@@ -40,13 +40,14 @@ If you wish to try training our model from scratch, please run IAB.py, for examp
 ```shell
 python IAB.py --dataset [CUB/AWA2/FLO/SUN]
 ```
-We have provided the following in . /configs provides parameter settings for different datasets, but this may not be optimal. If you want to try the rest of the settings, try adjusting a few of the more important ones:
-Please pay attention to several main settings here: 
-* dataset        %the source dataset for training (cityscapes or gta5)
-* data_root        %root to your dataset
-* DKI_save_dir        %Dir used to store DKI weights
-* target_domain        %The domain IMEC wants to extend
-
+We have provided the following configurations in the /configs directory, which contain parameter settings for different datasets. However, it is important to note that these settings may not be optimal. If you wish to explore other configurations, we suggest adjusting a few of the more crucial ones.
+* t        %temperature coefficient
+* unfix_low        %determines whether the low-level layers in ResNet are frozen
+* unfix_high        %determines whether the high-level layers in ResNet are frozen
+* pretrain_epoch        %the number of epochs for the warm-up phase
+* random_grouping  %specifies whether random divided groups are used
+* Lp1  %the number of groups when utilizing random groups
+  
 ## Acknowledgment
 
 We are very grateful to the following repos for their great help in constructing our work:
