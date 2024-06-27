@@ -15,6 +15,17 @@ Set the --root in opt.py as your code path.
 Please download CUB, AWA2, SUN, FLO datasets, and set the --image_root in opt.py to the datasets.
 
 Please download pretrained resnet [weights](https://drive.google.com/file/d/1c5scuU0kZS5a9Rz3kf5T0UweCvOpGsh2/view)[1] and place it in ./pretrained_models/
+
+The final project folder should contain the following structure:
+  ```html
+  <IAB_DIR>/                   % IAB root
+  ├── pretrained_models/                 % Place the pretrained resnet weights there
+  ├── data/                 % dataset spilit for AWA2, CUB, FLO, SUN
+  ├── logs/                 %  for saving the training logs
+  ├── out/                 %  for saving weights during training
+  ├── other .py files        %  for saving weights during training
+  ```
+
 ## Test
 You can evaluate our [pretrained model](https://drive.google.com/file/d/1DDMeK4S0AMuo2MSPgBzQWJgSyx7XgIwt/view?usp=sharing).
 
@@ -30,6 +41,11 @@ If you wish to try training our model from scratch, please run IAB.py, for examp
 python IAB.py --dataset [CUB/AWA2/FLO/SUN]
 ```
 We have provided the following in . /configs provides parameter settings for different datasets, but this may not be optimal. If you want to try the rest of the settings, try adjusting a few of the more important ones:
+Please pay attention to several main settings here: 
+* dataset        %the source dataset for training (cityscapes or gta5)
+* data_root        %root to your dataset
+* DKI_save_dir        %Dir used to store DKI weights
+* target_domain        %The domain IMEC wants to extend
 
 ## Acknowledgment
 
