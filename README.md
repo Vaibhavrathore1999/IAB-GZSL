@@ -21,14 +21,15 @@ You can evaluate our [pretrained model](https://drive.google.com/file/d/1DDMeK4S
 Please specify the --model_path in opt.py and then run:
 
 ```shell
-python test.py --att_size 85 --image_size 224 --calibrated_stacking 2.0 --seen_classes 40 --nclasses 50
+python test.py --dataset [CUB/AWA2/FLO/SUN]
 ```
 
 ## Train
 If you wish to try training our model from scratch, please run IAB.py, for example:
 ```shell
-python IAB.py --att_size 85 --image_size 224 --t 8  --gamma 2 --delta 2.0 --calibrated_stacking 2.0 --seen_classes 40 --nclasses 50
+python IAB.py --dataset [CUB/AWA2/FLO/SUN]
 ```
+We have provided the following in . /configs provides parameter settings for different datasets, but this may not be optimal. If you want to try the rest of the settings, try adjusting a few of the more important ones:
 
 ## Acknowledgment
 
