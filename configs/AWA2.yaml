@@ -8,7 +8,7 @@ Experiment:
   image_size: 224
   seen_classes: 40
   nclasses: 50
-  device: "cuda:1"
+  device: "cuda:0"
   random_grouping: true
   random_crop: true
   train_id: 1

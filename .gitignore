@@ -1,0 +1,7 @@
+*.pth
+AwA2/
+*.pyc
+*.mat
+logs/
+out/
+data/

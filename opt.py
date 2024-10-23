@@ -30,9 +30,9 @@ def get_opt():
     #key parameters
     parser.add_argument('--dataset', default='CUB', help='FLO, CUB')
     parser.add_argument('--root', default='./', help='path to project')
-    parser.add_argument('--image_root', default='', type=str, metavar='PATH',
+    parser.add_argument('--image_root', default='./', type=str, metavar='PATH',
                         help='path to image root')
-    parser.add_argument('--device', default='cuda:1', help='cuda:{} for running')
+    parser.add_argument('--device', default='cuda:0', help='cuda:{} for running')
     parser.add_argument('--group_path', default='',
                         # resnet101_cub.pth.tar resnet101-5d3b4d8f.pth
                         help="path to group files")
@@ -77,7 +77,7 @@ def get_opt():
     parser.add_argument('--alpha7', type=float, default=0.0)
 
     parser.add_argument('--random_grouping',type = bool, default = True)
-    parser.add_argument('--model_path', default='',help="path to trained model.")
+    parser.add_argument('--model_path', default='./IAB-GZSL/pretrained_models/resnet101-5d3b4d8f.pth',help="path to trained model.")
     parser.add_argument('--vars_test', action='store_true', default=False)
     parser.add_argument('--NAA_test', action='store_true', default=False)
     # opt for finetune ALE
